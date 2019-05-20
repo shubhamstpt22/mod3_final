@@ -10,7 +10,7 @@
     function FoundItems() {
         var ddo = {
             restrict: 'E',
-            templateUrl: 'foundItems.html',
+            template: '<div class="row"><div ng-repeat="item in menu.foundItems"><div class="clearfix" ng-if="$index % 2 == 0"></div><div class="col-md-6"><div class="jumbotron"><h2>{{item.name}}</h2><h3>{{item.short_name}}</h3><p>{{item.description}}</p><input type="button" ng-click="menu.onRemove({index: $index})" class="btn btn-lg btn-primary" value="Dont want this one!"></div></div></div></div><div class="alert alert-danger" role="alert" ng-show="menu.onEmpty">{{menu.onEmpty}}</div>',
             scope: {
                 foundItems: '<',
                 onEmpty: '<',
